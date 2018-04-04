@@ -72,22 +72,22 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
-function myFun() {
-    var input, filter, i; //
-    input = document.getElementById("myInput"); //
-    filter = input.value.toUpperCase(); //
-    tbody = document.getElementById('coffees');
-    for (i = 0; i < coffees.length; i++) {  // coffees
-
-        if (coffees[i].innerHTML.toUpperCase().indexOf(filter) > -1) { //
-            coffees[i].style.display = ""; //
-        } else {
-            coffees[i].style.display = "none"; //
-
-        }
-    }
-}
+//
+// function myFun() {
+//     var input, filter, i; //
+//     input = document.getElementById("myInput"); //
+//     filter = input.value.toUpperCase(); //
+//     tbody = document.getElementById('coffees');
+//     for (i = 0; i < coffees.length; i++) {  // coffees
+//
+//         if (coffees[i].innerHTML.toUpperCase().indexOf(filter) > -1) { //
+//             coffees[i].style.display = ""; //
+//         } else {
+//             coffees[i].style.display = "none"; //
+//
+//         }
+//     }
+// }
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
