@@ -1,11 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -47,6 +46,20 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+function myFun() {
+    var input, filter, i; //
+    input = document.getElementById("myInput"); //
+    filter = input.value.toUpperCase(); //
+    for (i = 0; i < li.length; i++) {  // coffeees
+        if (coffees[i].innerHTML.toUpperCase().indexOf(filter) > -1) { //
+            coffees[i].style.display = ""; //
+        } else {
+            coffees[i].style.display = "none"; //
+
+        }
+    }
+}
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
