@@ -1,3 +1,14 @@
+* {
+	/*padding: 10px;*/
+	/*border: 10px;*/
+	margin: 10px;
+}
+
+.h1 {
+	position: center;
+	background-color: grey;
+}
+
 table {
 	border-collapse: collapse;
 	margin: 15px 0;
