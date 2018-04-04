@@ -2,7 +2,6 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -47,6 +46,20 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+function myFun() {
+    var input, filter, i; //
+    input = document.getElementById("myInput"); //
+    filter = input.value.toUpperCase(); //
+    for (i = 0; i < li.length; i++) {  // coffeees
+        if (coffees[i].innerHTML.toUpperCase().indexOf(filter) > -1) { //
+            coffees[i].style.display = ""; //
+        } else {
+            coffees[i].style.display = "none"; //
+
+        }
+    }
+}
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
