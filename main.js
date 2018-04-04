@@ -1,11 +1,35 @@
-"use strict"
+"use strict";
+//  ========================  TEST  =================
+function changeRoast() {
+    var x = document.getElementById("mySelect");
+    document.getElementById("demo").innerHTML = x.options[x.selectedIndex].text;
+}
 
+function displayCoffees(arr) {
+    var coffeesContainer ='<div id="coffee-labels-container">';
+    arr.forEach(function (el) {
+        coffeesContainer += '<h2 class="coffee-name">' + el.name + '</h2>';
+    });
+    coffeesContainer += '</div>';
+    document.getElementById('coffee-container').innerHTML = coffeesContainer;
+}
+
+document.getElementById('').addEventListener('keyup', function() {
+    var newCoffees = [];
+    coffees.forEach(function (el) {
+        if(el.name.toLowerCase().match(document.getElementById('search').value)) {
+            newCoffees.push(el);
+        }
+    });
+    displayCoffees(newCoffees);
+});
+
+//==============================
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
-
     return html;
 }
 
@@ -51,7 +75,9 @@ function myFun() {
     var input, filter, i; //
     input = document.getElementById("myInput"); //
     filter = input.value.toUpperCase(); //
-    for (i = 0; i < li.length; i++) {  // coffeees
+    tbody = document.getElementById('coffees');
+    for (i = 0; i < coffees.length; i++) {  // coffees
+
         if (coffees[i].innerHTML.toUpperCase().indexOf(filter) > -1) { //
             coffees[i].style.display = ""; //
         } else {
