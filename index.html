@@ -22,16 +22,15 @@
         <div class="box">
             <h2>Roast</h2>
             <form>
-                <!--<label for="changeRoast"></label>-->
-                <select id="mySelect" onchange="changeRoast()">
-                    <option value="">light</option>
-                    <option value="">medium</option>
-                    <option value="">dark</option>
+                <label class="renderCoffees"></label>
+                <select id="roast-selection">
+                    <option value="light">light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
                 </select>
             </form>
             <h2>Coffee Name</h2>
-            <input type="text" id="myInput" onkeyup="myFun()"
-                   placeholder="Roast" title="Type in a name">
+            <input type="text" id="myInput" placeholder="Roast" title="Type in a name">
             <input id="submit" type="submit"/>
         </div>
     </div>
