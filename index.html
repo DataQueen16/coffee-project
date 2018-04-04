@@ -22,11 +22,11 @@
         <div class="box">
             <h2>Roast</h2>
             <form>
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
+                <!--<label for="changeRoast"></label>-->
+                <select id="mySelect" onchange="changeRoast()">
+                    <option value="">light</option>
+                    <option value="">medium</option>
+                    <option value="">dark</option>
                 </select>
             </form>
             <h2>Coffee Name</h2>
@@ -40,6 +40,7 @@
                     col-md-6
                     col-lg-4">
         <div class="box">
+            <p id="demo"></p>
             <div class="container" id="coffees">
             </div>
         </div>
