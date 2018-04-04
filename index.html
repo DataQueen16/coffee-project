@@ -2,33 +2,174 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Fancy Coffee Company</title>
     <link rel="stylesheet" href="style.css">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+
 </head>
 <body>
 <h1>Coffee!</h1>
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="submit" type="submit" />
-</form>
 
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>ROAST</th>
-    </tr>
-    </thead>
-    <tbody id="coffees"></tbody>
-</table>
+<div class="row">
+    <div class="col-xs-12
+                    col-sm-8
+                    col-md-6
+                    col-lg-4">
+        <div class="box">
+            <h2>Roast</h2>
+            <form>
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+            </form>
+            <h2>Coffee Name</h2>
+            <input type="text" id="myInput" onkeyup="myFun()"
+                   placeholder="Roast" title="Type in a name">
+            <input id="submit" type="submit"/>
+        </div>
+    </div>
+    <div class="col-xs-12
+                    col-sm-8
+                    col-md-6
+                    col-lg-4">
+        <div class="box">
+            <div class="myUL">
+                <div>
+                    <a href="#">
+                        <h3>Light City</h3>
+                        <p>light</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>Half City</h3>
+                        <p>light</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>Cinnamon</h3>
+                        <p>light</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>City</h3>
+                        <p>medium</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>American</h3>
+                        <p>medium</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>Breakfast</h3>
+                        <p>medium</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>High</h3>
+                        <p>dark</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>Continental</h3>
+                        <p>dark</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>New Orleans</h3>
+                        <p>dark</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>European</h3>
+                        <p>dark</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>Espresso</h3>
+                        <p>dark</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>Viennese</h3>
+                        <p>dark</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>Italian</h3>
+                        <p>dark</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <h3>French</h3>
+                        <p>dark</p>
+                    </a>
+                </div>
 
-<script src="main.js"></script>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                    </thead>
+                    <tbody id="coffees"></tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function myFun() {
+            var input, filter, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+
+                }
+            }
+        }
+    </script>
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </body>
 </html>
