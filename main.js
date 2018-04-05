@@ -1,12 +1,30 @@
-"use strict"
+"use strict";
 
+function displayCoffees(arr) {
+    var coffeesContainer ='<div id="coffee-labels-container">';
+    arr.forEach(function (el) {
+        coffeesContainer += '<h2 class="coffee-name">' + el.name + '</h2>';
+    });
+    coffeesContainer += '</div>';
+    document.getElementById('coffees').innerHTML = coffeesContainer;
+}
+
+document.getElementById('myInput').addEventListener('keyup', function() {
+    var newCoffees = [];
+    coffees.forEach(function (el) {
+        if(el.name.toLowerCase().match(document.getElementById('myInput').value)) {
+            newCoffees.push(el);
+        }
+    });
+    displayCoffees(newCoffees);
+});
+
+//==============================
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
+    var html = '<div class="coffee">';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
     return html;
 }
 
@@ -48,10 +66,12 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+// submitButton.addEventListener('keyUp', displayCoffees);

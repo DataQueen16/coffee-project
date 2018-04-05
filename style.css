@@ -1,9 +1,14 @@
-table {
-	border-collapse: collapse;
-	margin: 15px 0;
+* {
+	/*padding: 10px;*/
+	border: solid black 1px;
+	margin: 10px;
 }
 
-td, th {
-	border: 1px solid black;
-	padding: 5px 10px;
+.h1 {
+	position: center;
+	background-color: grey;
+}
+
+.drop-down {
+    width: 45vw;
 }
