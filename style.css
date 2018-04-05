@@ -12,3 +12,13 @@
 .drop-down {
     width: 45vw;
 }
+
+div.col-sm-12.col-md-10.col-lg-8 {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    background-color: grey;
+}

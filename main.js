@@ -4,6 +4,7 @@ function displayCoffees(arr) {
     var coffeesContainer ='<div id="coffee-labels-container">';
     arr.forEach(function (el) {
         coffeesContainer += '<h2 class="coffee-name">' + el.name + '</h2>';
+        coffeesContainer += '<p> + coffee.roast + </p>';
     });
     coffeesContainer += '</div>';
     document.getElementById('coffees').innerHTML = coffeesContainer;
@@ -48,6 +49,23 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+function addCoffee() {
+    var input_value = document.getElementById('myInput').value;
+    document.getElementById('submit').innerHTML = input_value;
+    var roast_value = document.getElementById('roast-selection').value;
+    document.getElementsById('roastchoice').innerHTML = roast_value;
+
+    var firstCoffee = {
+        name: 'input_value',
+        roast: 'roast_value'
+    };
+
+    var newCoffeeArray = [];
+    newCoffeeArray.push(firstCoffee);
+
+
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -74,4 +92,9 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
-// submitButton.addEventListener('keyUp', displayCoffees);
+
+// var submitButton2 = document.querySelector('#submit2');
+// var roastSelection2 = document.querySelector('#roastSelection2');
+//
+//
+// roastSelection2.addEventListener('change', updateCoffees);
