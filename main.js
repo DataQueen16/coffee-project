@@ -4,7 +4,7 @@ function displayCoffees(arr) {
     var coffeesContainer ='<div id="coffee-labels-container">';
     arr.forEach(function (el) {
         coffeesContainer += '<h2 class="coffee-name">' + el.name + '</h2>';
-        coffeesContainer += '<p> + coffee.roast + </p>';
+        coffeesContainer += '<p>' + coffee.roast + '</p>';
     });
     coffeesContainer += '</div>';
     document.getElementById('coffees').innerHTML = coffeesContainer;
@@ -20,7 +20,7 @@ document.getElementById('myInput').addEventListener('keyup', function() {
     displayCoffees(newCoffees);
 });
 
-//==============================
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h3>' + coffee.name + '</h3>';

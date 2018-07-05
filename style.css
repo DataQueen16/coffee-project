@@ -1,24 +1,31 @@
 * {
-	/*padding: 10px;*/
-	border: solid black 1px;
-	margin: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .h1 {
-	position: center;
-	background-color: grey;
+    background-image: url('coffee_swirl.jpeg');
+    height: 50vh;
 }
 
-.drop-down {
-    width: 45vw;
+h1 {
+     text-align: center;
+     color: white;
+     padding: 0;
+     margin: 0;
+     background-color: rgb(221, 150, 55, 0.5);
 }
 
-div.col-sm-12.col-md-10.col-lg-8 {
-    height: 100vh;
-    padding: 0;
-    margin: 0;
+.card-style {
+    background-color: rgb(221, 150, 55, 0.5);
 }
 
-form {
-    background-color: grey;
+.shadows {   /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
+
+.shadows:hover {  /* On mouse-over, add a deeper shadow */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
